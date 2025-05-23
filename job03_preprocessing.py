@@ -32,4 +32,4 @@ df.dropna(inplace=True) # 결측치 제거
 df.info()
 df.head()
 
-df.to_csv('./cleaned_data/cleaned_reviews', index=False) # csv 파일로 저장
+df.to_csv('./cleaned_data/cleaned_reviews.csv', index=False) # csv 파일로 저장
