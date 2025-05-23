@@ -29,7 +29,14 @@ for review in df.reviews:
 
 df['reviews'] = cleaned_sentences
 df.dropna(inplace=True) # 결측치 제거
-df.info()
-df.head()
+df.drop_duplicates(inplace=True)
 
+df.info()
+print(df.head())
+
+df.to_csv('./cleaned_data/cleaned_reviews.csv', index=False) # csv 파일로 저장
+
+df = pd.read_csv('./cleaned_data/cleaned_reviews.csv')
+df.dropna(inplace=True)
+df.info()
 df.to_csv('./cleaned_data/cleaned_reviews.csv', index=False) # csv 파일로 저장

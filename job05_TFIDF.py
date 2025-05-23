@@ -4,6 +4,7 @@ from scipy.io import mmwrite, mmread
 
 df_reviews = pd.read_csv('./cleaned_data/cleaned_reviews.csv')
 df_reviews.dropna(inplace=True)
+df_reviews.to_csv('./cleaned_data/cleaned_reviews.csv', index=False)
 df_reviews.info()
 
 tfidf = TfidfVectorizer(sublinear_tf=True)

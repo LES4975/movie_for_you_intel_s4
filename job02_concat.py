@@ -49,7 +49,7 @@ for path in data_paths:
         if title != old_title:
             titles.append(title)
             old_title = title
-            df_movie = df_temp[df_temp.titles == title]
+            df_movie = df_temp[df_temp.titles == title] # 제목이 같으면 하나로 이어 붙이기
             review = ' '.join(df_movie.reviews) # 공백을 기준으로 리뷰들을 구분하기
             reviews.append(review) # 리뷰를 리스트에 추가
     print(len(titles))
