@@ -17,7 +17,7 @@ tfidf_matrix = mmread('./models/tfidf_movie_review.mtx').tocsr()
 with open('./models/tfidf.pickle', 'rb') as f:
     tfidf = pickle.load(f)
 
-ref_idx = 695
+ref_idx = 695 # 특정 영화의 인덱스
 print(df_reviews.iloc[ref_idx, 0])
 cosine_sim = linear_kernel(tfidf_matrix[ref_idx], tfidf_matrix)
 print(cosine_sim)
